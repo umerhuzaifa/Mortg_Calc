@@ -24,7 +24,7 @@ class Mortg:
         self.total_payable = 360 * self.monthly_price
         self.total_interest = self.total_payable - self.borrowed
         for i in range(360):
-            self.lst_month.append(self.monthly_price)
+            self.lst_principal.append(self.monthly_price)
         self.display_results(30)
         
     def mort_15f(self):
@@ -50,7 +50,7 @@ class Mortg:
         months = np.linspace(1, tenor * 12, tenor * 12)
         fig = plt.figure()
         ax = fig.add_axes([0,0,1,1])
-        ax.bar(months,self.lst_month)
+        ax.bar(months,self.lst_principal)
         plt.show()
     def month_break(self):
         '''Calculation of breakdown of interest and instalments '''
